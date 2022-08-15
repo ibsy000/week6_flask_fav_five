@@ -4,9 +4,9 @@ from flask import render_template
 
 @app.route('/')
 def index():
-    return '<h1>Hello World</h1>'
+    return render_template('index.html')
 
 
 @app.route('/test')
 def test():
-    return '<h1>This is a test</h1>'
+    return render_template('test.html')
