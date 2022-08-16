@@ -7,14 +7,14 @@
 <!-- adds content -->
 {% block content %}
 
-<h1>This is the Favorites Page</h1>
+<h1 style="font-family:fantasy; text-align:center">This is the Favorites Page</h1>
 
-<h3>My top 5 favorite Studio Ghibli films are:</h3>
+<h3 style="font-family:monospace; text-align:center;">My top 5 favorite Studio Ghibli films are:</h3>
 
 <div class="row" style="flex-wrap: wrap; justify-content: space-evenly;">
 
     {% for info in fav_ghibli %}
-            <div class="card" style="width: 18rem; padding-top: 10px; margin-top: 20px;">
+            <div class="card" style="width: 25rem; padding-top: 10px; margin-top: 20px; background-color: rgba(255, 255, 255, 0.788);">
                 <img src="{{ info['image'] }}" class="card-img-top" style="border-radius: 5px;" alt="Ghibli Film">
                 <div class="card-body" style="text-align: center;">
                   <h5 class="card-title">{{ info['title'] }}</h5>
