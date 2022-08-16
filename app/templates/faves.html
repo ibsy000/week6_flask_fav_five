@@ -8,14 +8,23 @@
 {% block content %}
 
 <h1>This is the Favorites Page</h1>
+
 <h3>My top 5 favorite Studio Ghibli films are:</h3>
-<ul>
+
+<div class="row">
+
     {% for film in fav_ghibli %}
-        <li>
-            {{ film }}
-        </li>
+            <div class="card" style="width: 18rem; ">
+                <img src="{{ fav_ghibli[film] }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ film }}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
     {% endfor %}
-</ul>
+    
+</div>
 
 
 {% endblock content %}
