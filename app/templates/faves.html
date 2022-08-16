@@ -11,11 +11,11 @@
 
 <h3>My top 5 favorite Studio Ghibli films are:</h3>
 
-<div class="row">
+<div class="row" style="flex-wrap: wrap; justify-content: space-evenly;">
 
     {% for film in fav_ghibli %}
-            <div class="card" style="width: 18rem; ">
-                <img src="{{ fav_ghibli[film] }}" class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem; padding-top: 10px; margin-top: 20px;">
+                <img src="{{ fav_ghibli[film] }}" class="card-img-top" style="border-radius: 5px;" alt="Ghibli Film">
                 <div class="card-body">
                   <h5 class="card-title">{{ film }}</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
