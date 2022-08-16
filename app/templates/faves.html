@@ -13,13 +13,13 @@
 
 <div class="row" style="flex-wrap: wrap; justify-content: space-evenly;">
 
-    {% for film in fav_ghibli %}
+    {% for info in fav_ghibli %}
             <div class="card" style="width: 18rem; padding-top: 10px; margin-top: 20px;">
-                <img src="{{ fav_ghibli[film] }}" class="card-img-top" style="border-radius: 5px;" alt="Ghibli Film">
-                <div class="card-body">
-                  <h5 class="card-title">{{ film }}</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                <img src="{{ info['image'] }}" class="card-img-top" style="border-radius: 5px;" alt="Ghibli Film">
+                <div class="card-body" style="text-align: center;">
+                  <h5 class="card-title">{{ info['title'] }}</h5>
+                  <p class="card-text">{{ info['description'] }}</p>
+                  <a href="{{ info['link'] }}" class="btn btn-primary">Watch on HBO</a>
                 </div>
               </div>
     {% endfor %}
